@@ -55,6 +55,7 @@ const Feed = () => {
       }, 500)
     );
   };
+
   const handleTagClick = (tagName: string) => {
     setSearchText(tagName);
 

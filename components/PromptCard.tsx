@@ -15,7 +15,7 @@ const PromptCard = ({
   const pathName = usePathname();
   const router = useRouter();
 
-  const [copied, setCopied] = useState<any>("");
+  const [copied, setCopied] = useState<string>("");
 
   const handleProfileClick = () => {
     // console.log(post);
@@ -28,7 +28,7 @@ const PromptCard = ({
   const handleCopy = () => {
     setCopied(post.prompt);
     navigator.clipboard.writeText(post.prompt);
-    setTimeout(() => setCopied(false), 3000);
+    setTimeout(() => setCopied(""), 3000);
   };
 
   return (
